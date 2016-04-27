@@ -30,17 +30,17 @@ a{
     left: 250px;
     z-index: 2;
 }
-.dot{
+#runimg-buttons span{
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #333;
     display: inline-block;
 }
-.dot.active{
+#runimg-buttons span.active{
     background-color: #ef5350;
 }
-.ctrlbar{
+.runimg-ctrlbar{
     position: absolute;
     width: 40px;
     height: 40px;
