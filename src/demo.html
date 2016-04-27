@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>runimg demo</title>
+    <style>
+        #container{
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+        #list{
+            width: 3000px;
+            height: 400px;
+            position: absolute;
+        }
+        #list img{
+            float: left;
+            max-width: 100%;
+        }
+        #buttons{
+            position: absolute;
+            bottom: 10px;
+            left: 250px;
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #333;
+            display: inline-block;
+        }
+        .dot.active{
+            background-color: #ef5350;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="list">
+            <img src="img/01.jpg" alt="">
+            <img src="img/02.jpg" alt="">
+            <img src="img/03.jpg" alt="">
+            <img src="img/04.jpg" alt="">
+            <img src="img/05.jpg" alt="">
+        </div>
+        <div id="buttons">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="ctrlbar"></a>
+        <a href="javascript:;" id="next" class="ctrlbar"></a>
+    </div>
+</body>
+</html>
