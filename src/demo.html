@@ -3,12 +3,21 @@
 <head>
     <meta charset="utf-8">
     <title>runimg demo</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
     <style>
+        a{
+            text-decoration: none;
+        }
+        .title{
+            width: 600px;
+            margin: 100px auto 20px;
+        }
         #container{
             width: 600px;
             height: 400px;
             overflow: hidden;
             position: relative;
+            margin:0 auto;
         }
         #list{
             width: 3000px;
@@ -34,9 +43,28 @@
         .dot.active{
             background-color: #ef5350;
         }
+        .ctrlbar{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            top: 180px;
+            color: #fff;
+            background-color: rgba(0,0,0,.5);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #prev{
+            left: 10px;
+        }
+        #next{
+            right: 10px;
+        }
     </style>
 </head>
 <body>
+    <p class="title">原生JS实现的轮播图插件</p>
     <div id="container">
         <div id="list">
             <img src="img/01.jpg" alt="">
@@ -52,8 +80,8 @@
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-        <a href="javascript:;" id="prev" class="ctrlbar"></a>
-        <a href="javascript:;" id="next" class="ctrlbar"></a>
+        <a href="javascript:;" id="prev" class="ctrlbar"><span class="icon-chevron-left"></span></a>
+        <a href="javascript:;" id="next" class="ctrlbar"><span class="icon-chevron-right"></span></a>
     </div>
 </body>
 </html>
