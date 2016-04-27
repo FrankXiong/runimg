@@ -1,0 +1,61 @@
+a{
+    text-decoration: none;
+}
+.title{
+    width: 600px;
+    margin: 100px auto 20px;
+}
+#runimg-container{
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin:0 auto;
+}
+#runimg-list{
+    width: 3000px;
+    height: 400px;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+}
+#runimg-list img{
+    float: left;
+    max-width: 100%;
+    width: 600px;
+}
+#runimg-buttons{
+    position: absolute;
+    bottom: 10px;
+    left: 250px;
+    z-index: 2;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    display: inline-block;
+}
+.dot.active{
+    background-color: #ef5350;
+}
+.ctrlbar{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 180px;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+#runimg-prev{
+    left: 10px;
+}
+#runimg-next{
+    right: 10px;
+}

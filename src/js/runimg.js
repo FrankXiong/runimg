@@ -21,24 +21,30 @@
             prev = $('#runimg-prev')[0],
             next = $('#runimg-next')[0],
             animated = false;
-
+        
         function animate(offset){
             if(offset === 0){
                 return;
             }
             animated = true;
-            var left = parseInt(list.style.left)+offset;
+            var left = parseInt(list.style.left) + offset;
             var go = function(){
-
+                var currLeft = parseInt(list.style.left) + offset;
+                list.style.left = currLeft + 'px';
+                if(currLeft > 0){
+                    list.style.left = -2400 + 'px';
+                }
+                if(currLeft < -2400){
+                    list.style.left = 0 + 'px';
+                }
             }
             go();
         }
         bindEvent(prev,'click',function(){
-            list.style.left = parseInt(list.style.left) - 600 + 'px';
-            log(list.style.left);
+            animate(-600);
         });
         bindEvent(next,'click',function(){
-            list.style.left = parseInt(list.style.left) + 600 + 'px';
+            animate(600);
         });
         
     }
