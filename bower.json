@@ -1,0 +1,25 @@
+{
+  "name": "runimg",
+  "version": "0.1.0",
+  "authors": [
+    "xxr <xianren_xiong@163.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets",
+    "test",
+    "tests"
+  ],
+  "dependencies": {    
+    "requirejs": "~2.1.20"
+  },
+  "homepage": "https://github.com/FrankXiong/runimg",
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "keywords": [],
+  "private": true
+}

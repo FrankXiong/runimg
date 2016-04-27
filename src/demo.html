@@ -12,26 +12,30 @@
             width: 600px;
             margin: 100px auto 20px;
         }
-        #container{
+        #runimg-container{
             width: 600px;
             height: 400px;
             overflow: hidden;
             position: relative;
             margin:0 auto;
         }
-        #list{
+        #runimg-list{
             width: 3000px;
             height: 400px;
             position: absolute;
+            z-index: 1;
+            left: 0px;
         }
-        #list img{
+        #runimg-list img{
             float: left;
             max-width: 100%;
+            width: 600px;
         }
-        #buttons{
+        #runimg-buttons{
             position: absolute;
             bottom: 10px;
             left: 250px;
+            z-index: 2;
         }
         .dot{
             width: 10px;
@@ -54,34 +58,36 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
+            z-index: 2;
         }
-        #prev{
+        #runimg-prev{
             left: 10px;
         }
-        #next{
+        #runimg-next{
             right: 10px;
         }
     </style>
 </head>
 <body>
     <p class="title">原生JS实现的轮播图插件</p>
-    <div id="container">
-        <div id="list">
+    <div id="runimg-container">
+        <div id="runimg-list">
             <img src="img/01.jpg" alt="">
             <img src="img/02.jpg" alt="">
             <img src="img/03.jpg" alt="">
             <img src="img/04.jpg" alt="">
             <img src="img/05.jpg" alt="">
         </div>
-        <div id="buttons">
+        <div id="runimg-buttons">
             <span class="dot active"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
         </div>
-        <a href="javascript:;" id="prev" class="ctrlbar"><span class="icon-chevron-left"></span></a>
-        <a href="javascript:;" id="next" class="ctrlbar"><span class="icon-chevron-right"></span></a>
+        <a href="javascript:;" id="runimg-prev" class="ctrlbar"><span class="icon-chevron-left"></span></a>
+        <a href="javascript:;" id="runimg-next" class="ctrlbar"><span class="icon-chevron-right"></span></a>
     </div>
+    <script src="js/runimg.js"></script>
 </body>
 </html>

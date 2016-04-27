@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 gulp.task('default',['clean'],function() {
     gulp.run("clean");
     gulp.run("generate");
+    gulp.run("libs");
     gulp.run("watch");
     gulp.run("server");
     gulp.run("openbrowser");
@@ -41,6 +42,19 @@ gulp.task('html', function() {
       .pipe(gulp.dest('dist/'))
       .pipe(livereload())
       .pipe(notify({message: 'HTML task complete'}));
+});
+
+var libs = {
+    js: [
+        "bower_components/requirejs/require.js",
+    ]
+};
+
+gulp.task("libs", function() {
+  gulp.src(libs.js)
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js/lib'))
+    .pipe(notify({ message: 'Libs-Scripts task complete' }));
 });
 
 //开启本地 Web 服务器功能

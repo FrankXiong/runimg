@@ -3,23 +3,91 @@
 <head>
     <meta charset="utf-8">
     <title>runimg demo</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
     <style>
-        #container{
+        a{
+            text-decoration: none;
+        }
+        .title{
+            width: 600px;
+            margin: 100px auto 20px;
+        }
+        #runimg-container{
             width: 600px;
             height: 400px;
             overflow: hidden;
+            position: relative;
+            margin:0 auto;
+        }
+        #runimg-list{
+            width: 3000px;
+            height: 400px;
+            position: absolute;
+            z-index: 1;
+            left: 0px;
+        }
+        #runimg-list img{
+            float: left;
+            max-width: 100%;
+            width: 600px;
+        }
+        #runimg-buttons{
+            position: absolute;
+            bottom: 10px;
+            left: 250px;
+            z-index: 2;
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #333;
+            display: inline-block;
+        }
+        .dot.active{
+            background-color: #ef5350;
+        }
+        .ctrlbar{
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            top: 180px;
+            color: #fff;
+            background-color: rgba(0,0,0,.5);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 2;
+        }
+        #runimg-prev{
+            left: 10px;
+        }
+        #runimg-next{
+            right: 10px;
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <div id="list">
+    <p class="title">原生JS实现的轮播图插件</p>
+    <div id="runimg-container">
+        <div id="runimg-list">
             <img src="img/01.jpg" alt="">
             <img src="img/02.jpg" alt="">
             <img src="img/03.jpg" alt="">
             <img src="img/04.jpg" alt="">
             <img src="img/05.jpg" alt="">
         </div>
+        <div id="runimg-buttons">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <a href="javascript:;" id="runimg-prev" class="ctrlbar"><span class="icon-chevron-left"></span></a>
+        <a href="javascript:;" id="runimg-next" class="ctrlbar"><span class="icon-chevron-right"></span></a>
     </div>
+    <script src="js/runimg.js"></script>
 </body>
 </html>
